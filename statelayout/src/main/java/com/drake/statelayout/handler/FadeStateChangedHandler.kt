@@ -51,6 +51,6 @@ open class FadeStateChangedHandler(var duration: Long = 400) : StateChangedHandl
         }
         super.onAdd(container, state, status, tag)
         state.alpha = 0f
-        state.animate().setDuration(duration).alpha(1f).start()
+        state.animate().setDuration(duration).alpha(1f).setListener(null).start()
     }
 }
